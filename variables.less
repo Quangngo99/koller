@@ -1,0 +1,246 @@
+@color-primary: #fcb800;
+@heading-color: #343e45;
+@color-gray: #666666;
+@color-red: #d43811;
+@color-green: #6daa03;
+@button-text: #333e48;
+@bg-color: #ffffff;
+@label-red: #d43811;
+@star: #f5b301;
+@bg-gray: #f6f6f6;
+@boder: #dddddd;
+@color-topHeader: #606060;
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: @color-gray;
+  line-height: 1;
+  font-weight: 500;
+  background-color: @bg-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  color: @color-gray;
+  letter-spacing: -0.1px;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+a:hover {
+  color: @heading-color;
+}
+ol,
+ul {
+  list-style: none outside none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: @heading-color;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  border: none;
+  background-color: @color-primary;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+strong {
+  color: @heading-color;
+  font-weight: 600;
+}
+
+.heading-green {
+  font-size: 18px;
+  color: @color-green;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+}
+
+.title {
+  font-size: 28px;
+  letter-spacing: -0.1px;
+
+  @media (max-width: 1199px) {
+    font-size: 26px;
+  }
+  @media (max-width: 991px) {
+    font-size: 24px;
+  }
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+  @media (max-width: 479px) {
+    font-size: 20px;
+  }
+}
+.price {
+  color: @label-red;
+  font-weight: 600;
+}
+.text-align {
+  text-align: center;
+}
+.product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  .product-item {
+    .product-item-img {
+      img {
+        width: 100%;
+      }
+    }
+    .product-item-container {
+      padding: 16px 0 10px 2px;
+      h5 {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      .evaluate {
+        .align-center();
+        gap: 0 8px;
+        margin: 18px 0 13px;
+        .star {
+          color: @star;
+          letter-spacing: -2px;
+          i {
+            font-size: 16px;
+          }
+        }
+        span {
+          font-size: 13px;
+        }
+      }
+      .price {
+        font-size: 16px;
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: @color-gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    grid-gap: 20px;
+  }
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 479px) {
+    grid-gap: 10px;
+    .product-item {
+      .product-item-container {
+        padding: 10px;
+        h5 {
+          font-size: 12px;
+          margin-bottom: 8px;
+        }
+        span {
+          font-size: 10px;
+        }
+        .evaluate {
+          margin: 10px 0 10px;
+          .star {
+            color: @star;
+            letter-spacing: -2px;
+            i {
+              font-size: 14px;
+            }
+          }
+          span {
+            font-size: 11px;
+          }
+        }
+        .price {
+          font-size: 12px;
+
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.discount {
+  display: flex;
+  flex-direction: column;
+  gap: 3px 0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  p {
+    padding: 6px 12px;
+    .border-radius(3px);
+    color: @bg-color;
+    font-weight: 600;
+  }
+  p:nth-child(1) {
+    background-color: @color-red;
+  }
+  p:nth-child(2) {
+    background-color: @color-green;
+  }
+
+  @media (max-width: 1199px) {
+    p {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 479px) {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media only screen and (max-width: 1399px) {
+    width: 100%;
+  }
+}
